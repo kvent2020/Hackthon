@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+
+curl -u wasadmin:11c498973cd17808f875e322169caf39c0 -X POST http://localhost:8080/job/tldp-server/build?token=11c498973cd17808f875e322169caf39c0
+
+
+exec git update-server-info
